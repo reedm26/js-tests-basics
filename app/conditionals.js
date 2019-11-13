@@ -52,12 +52,12 @@ function timeOfDayGreeting(hour) {
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
-  if (temp >= 98.6) {
-    return "fever";
-  } else if (temp >= 103) {
+  if (temp >= 103) {
     return "fever go to hospital";
   } else if (temp <= 98.6) {
     return "no fever";
+  } else {
+    return "fever";
   }
 }
 
@@ -69,7 +69,13 @@ let myCar = {
   moving: false
 };
 
-function isStopped(car) {}
+function isStopped(car) {
+  if (car.moving == false) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 //6. Write a function that returns true if a dish is yours and is dirty, or false if one of the statements is false
 
@@ -78,4 +84,12 @@ let dish = {
   isDirty: true
 };
 
-function washDish(dish) {}
+function washDish(dish) {
+  if (dish.yourDish == false) {
+    return false;
+  } else if (dish.isDirty == false) {
+    return false;
+  } else {
+    return true;
+  }
+}
